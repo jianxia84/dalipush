@@ -1,5 +1,7 @@
 # dalipush
 
+fork from https://github.com/bravekingzhang/dalipush 
+
 集成了阿里推送，提供给flutter开发者使用。
 
 ## Getting Started
