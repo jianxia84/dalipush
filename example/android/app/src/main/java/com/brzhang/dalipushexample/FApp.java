@@ -13,6 +13,7 @@ import com.alibaba.sdk.android.push.register.MiPushRegister;
 public class FApp extends io.flutter.app.FlutterApplication {
 
     private static final String TAG = "FApp";
+    public static CloudPushService pushService;
 
     @Override
     public void onCreate() {
@@ -33,7 +34,7 @@ public class FApp extends io.flutter.app.FlutterApplication {
      */
     private void initCloudChannel(Context applicationContext) {
         PushServiceFactory.init(applicationContext);
-        CloudPushService pushService = PushServiceFactory.getCloudPushService();
+        pushService = PushServiceFactory.getCloudPushService();
         pushService.register(applicationContext, new CommonCallback() {
             @Override
             public void onSuccess(String response) {
