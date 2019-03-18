@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
-import 'package:dalipush/dalipush.dart';
+import 'package:simple_alipush/simplealipush.dart';
 
 void main() => runApp(new MyApp());
 
@@ -12,7 +12,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Dalipush _push = new Dalipush();
+  SimpleAlipush _push = new SimpleAlipush();
   String _platformVersion = 'Unknown';
 
 //  StreamSubscription<dynamic> _messageStreamSubscription;
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     String platformVersion;
     // Platform messages may fail, so we use a try/catch PlatformException.
     try {
-      platformVersion = await Dalipush().platformVersion;
+      platformVersion = await SimpleAlipush().platformVersion;
     } on PlatformException {
       platformVersion = 'Failed to get platform version.';
     }
