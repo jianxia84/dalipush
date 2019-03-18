@@ -1,5 +1,5 @@
 # simple_alipush
 
-forked from bhttps://github.com/bravekingzhang/dalipush
+forked from https://github.com/bravekingzhang/dalipush
 
 
